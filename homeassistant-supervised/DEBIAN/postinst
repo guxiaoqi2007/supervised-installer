@@ -126,6 +126,7 @@ sed -i -e "s,%%BINARY_DOCKER%%,${BINARY_DOCKER},g" \
        "${SYSCONFDIR}/systemd/system/hassio-supervisor.service"
 
 chmod a+x "${PREFIX}/sbin/hassio-supervisor"
+chmod a+x "${PREFIX}/sbin/cupdate.sh"
 systemctl enable hassio-supervisor.service > /dev/null 2>&1;
 
 # Install AppArmor
