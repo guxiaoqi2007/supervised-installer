@@ -3,6 +3,7 @@
     "storage-driver": "overlay2",
     "ip6tables": true,
     "experimental": true,
+    "registry-mirrors": ["https://yxv5jlh3.mirror.aliyuncs.com"],
     "log-opts": {
         "tag": "{{.Name}}"
     }
