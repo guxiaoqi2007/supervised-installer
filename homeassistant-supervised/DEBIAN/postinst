@@ -25,7 +25,7 @@ info "Restarting NetworkManager"
 systemctl restart "${SERVICE_NM}"
 
 # Enable and start systemd-resolved
-if [ "$(systemctl is-active systemd-resolved)" = 'inactive' ]; then
+if [ "$(systemctl is-active systemd-resolved)" = 'active' ]; then
     info "Enable systemd-resolved"
     systemctl enable systemd-resolved.service> /dev/null 2>&1;
     systemctl start systemd-resolved.service> /dev/null 2>&1;
