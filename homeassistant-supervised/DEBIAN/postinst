@@ -25,7 +25,7 @@ info "Restarting NetworkManager"
 systemctl restart "${SERVICE_NM}"
 
 # Enable and start systemd-resolved
-if [ "$(systemctl is-active systemd-resolved)" = 'active' ]; then
+if [ "$(systemctl is-active systemd-resolved)" = 'active' or "$(systemctl is-active systemd-resolved)" = 'inactive' ]; then
     info "Enable systemd-resolved"
     systemctl enable systemd-resolved.service> /dev/null 2>&1;
     systemctl start systemd-resolved.service> /dev/null 2>&1;
@@ -40,7 +40,7 @@ if [ ! -S "/run/systemd-journal-gatewayd.sock" ]; then
     rm -rf "/run/systemd-journal-gatewayd.sock";
 fi
 # Enable and start systemd-journal-gatewayd
-if [ "$(systemctl is-active systemd-journal-gatewayd.socket)" = 'inactive' ]; then
+if [ "$(systemctl is-active systemd-journal-gatewayd.socket)" = 'inactive' or "$(systemctl is-active systemd-journal-gatewayd.socket)" = 'active'  ]; then
     info "Enable systemd-journal-gatewayd"
     systemctl enable systemd-journal-gatewayd.socket> /dev/null 2>&1;
     systemctl start systemd-journal-gatewayd.socket> /dev/null 2>&1;
