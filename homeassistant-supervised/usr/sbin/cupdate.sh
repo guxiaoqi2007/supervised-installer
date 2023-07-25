@@ -8,4 +8,4 @@ sed -i "s/= data\[\"images\"\]\[\"cli\"\]/= str(data[\"images\"][\"cli\"]).repla
 sed -i "s/= data\[\"images\"\]\[\"dns\"\]/= str(data[\"images\"][\"dns\"]).replace(\'.io\', \'.dockerproxy.com\')/g" $tmp
 sed -i "s/= data\[\"images\"\]\[\"observer\"\]/= str(data[\"images\"][\"observer\"]).replace(\'.io\', \'.dockerproxy.com\')/g" $tmp
 sed -i "s/= data\[\"images\"\]\[\"multicast\"\]/= str(data[\"images\"][\"multicast\"]).replace(\'.io\', \'.dockerproxy.com\')/g" $tmp
-sed -i "s/.io/.dockerproxy.com/g" /usr/share/hassio/addons/git/a0d7b954/.addons.yml
+#sed -i "s/.io/.dockerproxy.com/g" /usr/share/hassio/addons/git/a0d7b954/.addons.yml
