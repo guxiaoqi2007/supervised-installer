@@ -8,7 +8,7 @@ ARCH=$(uname -m)
 
 BINARY_DOCKER=/usr/bin/docker
 
-DOCKER_REPO="ghcr.io/home-assistant"
+DOCKER_REPO="ghcr.dockerproxy.com/home-assistant"
 
 SERVICE_DOCKER="docker.service"
 SERVICE_NM="NetworkManager.service"
