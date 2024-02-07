@@ -80,7 +80,8 @@ if [ -n "${SUPERVISOR_CONTAINER_ID}" ]; then
         SUPERVISOR_CONTAINER_ID=""
     fi
 fi
-
+#change update dockerproxy.com
+/usr/bin/sh /usr/sbin/cupdate.sh
 # If Supervisor container is missing, create it
 if [ -z "${SUPERVISOR_CONTAINER_ID}" ]; then
     echo "[INFO] Creating a new Supervisor container..."
