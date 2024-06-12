@@ -2,7 +2,7 @@
 tmp=$(find /var/lib/docker/overlay2 -path '*diff/usr/src/supervisor/supervisor/const.py')
 echo "$tmp"
 if [ -n "$tmp" ]; then
-sed -i 's/URL_HASSIO_VERSION = \"https:\/\/version.home-assistant.io\/{channel}.json\"/URL_HASSIO_VERSION = \"http:\/guxiaoqi.dynv6.net:888\/{channel}.json\"/' $tmp
+sed -i 's/URL_HASSIO_VERSION = \"https:\/\/version.home-assistant.io\/{channel}.json\"/URL_HASSIO_VERSION = \"http:\/\/guxiaoqi.dynv6.net:888\/{channel}.json\"/' $tmp
 fi
 #sed -i "s/= data\[\"images\"\]\[\"core\"\]/= str(data[\"images\"][\"core\"]).replace(\'.io\', \'.nju.edu.cn\')/g" $tmp
 #sed -i "s/= data\[\"images\"\]\[\"supervisor\"\]/= str(data[\"images\"][\"supervisor\"]).replace(\'.io\', \'.nju.edu.cn\')/g" $tmp
