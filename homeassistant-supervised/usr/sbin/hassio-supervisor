@@ -81,7 +81,7 @@ if [ -n "${SUPERVISOR_CONTAINER_ID}" ]; then
     fi
 fi
 #change update dockerproxy.com
-/usr/bin/sh /usr/sbin/cupdate.sh
+/usr/bin/sh /usr/sbin/hassio-cupdate.sh
 # If Supervisor container is missing, create it
 if [ -z "${SUPERVISOR_CONTAINER_ID}" ]; then
     echo "[INFO] Creating a new Supervisor container..."
