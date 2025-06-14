@@ -22,10 +22,13 @@ fi
 file_path=$(find /var/lib/docker/overlay2 -path '*diff/usr/src/supervisor/supervisor/docker/interface.py' -print -quit)
 file_path1=$(find /var/lib/docker/overlay2 -path '*diff/usr/src/supervisor/supervisor/docker/manager.py' -print -quit)
 # 定义行号和要插入的文本
-cl=$(grep -n "arch = arch or self.sys_arch.supervisor" "$file_path" |cut -d: -f1) 
+cl=$(grep -n "image = image or self.image" "$file_path" | head -n 1 |cut -d: -f1) 
+
 line_number=$((cl+1))
+
 line_number2=$((line_number+1))
-ll=$(grep -n "hostname: str | None = kwargs.get(\"hostname\")" "$file_path1" |cut -d: -f1) 
+
+ll=$(grep -n "hostname: str | None = kwargs.get(\"hostname\")" "$file_path1" | head -n 1 |cut -d: -f1) 
 echo "${ll}"
 
 line_number1=$((ll+1))
