@@ -33,7 +33,7 @@ echo "${ll}"
 
 line_number1=$((ll+1))
 line_number3=$((line_number1+1))
-insert_text='        image = image.replace("homeassistant/", "registry.cn-hangzhou.aliyuncs.com/gxq2007/", 1)'
+insert_text='        image = image.replace("homeassistant/##", "registry.cn-hangzhou.aliyuncs.com/gxq2007/", 1)'
 insert_text1='        image = image.replace("ghcr.io/", "ghcr.nju.edu.cn/"],
 /", 1)'
 # 检查文件是否存在
