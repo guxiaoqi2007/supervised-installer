@@ -3,7 +3,7 @@
     "storage-driver": "overlay2",
     "ip6tables": true,
     "experimental": true,
-    "registry-mirrors": ["https://docker.nju.edu.cn/"],
+    "registry-mirrors": ["https://docker.xuanyuan.me"],
     "log-opts": {
         "tag": "{{.Name}}"
     }
